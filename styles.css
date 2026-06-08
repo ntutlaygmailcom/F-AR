@@ -557,6 +557,10 @@ h3 {
   border-radius: var(--comp-card-radius);
 }
 
+.payment-section .payment-terms-card {
+  margin-top: 0;
+}
+
 .payment-terms-intro {
   max-width: 760px;
 }
