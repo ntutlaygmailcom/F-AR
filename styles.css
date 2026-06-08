@@ -253,7 +253,9 @@ h3 {
 
 .hero-card,
 .feature-card,
+.addendum-card,
 .budget-card,
+.payment-terms-card,
 .journey article {
   border: 1px solid var(--sys-color-border);
   background: var(--sys-color-glass-surface);
@@ -385,10 +387,13 @@ h3 {
 }
 
 .feature-card p,
+.addendum-card p,
+.addendum-card li,
 .journey p,
 .check-list,
 .budget-row span,
-.budget-total span {
+.budget-total span,
+.payment-terms-card p {
   color: var(--sys-color-muted);
 }
 
@@ -447,6 +452,59 @@ h3 {
   background: var(--sys-color-accent);
 }
 
+.addendum-section {
+  padding-top: var(--ref-space-6);
+}
+
+.addendum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--ref-space-4);
+}
+
+.addendum-card {
+  padding: var(--ref-space-5);
+  border-radius: var(--comp-card-radius);
+}
+
+.addendum-card-featured {
+  background: var(--sys-color-surface-warm);
+}
+
+.addendum-card h4 {
+  margin: 0 0 var(--ref-space-2);
+  color: var(--sys-color-primary);
+  font-size: 0.95rem;
+}
+
+.addendum-list-group {
+  margin-top: var(--ref-space-5);
+}
+
+.addendum-card ul {
+  display: grid;
+  gap: var(--ref-space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.addendum-card li {
+  position: relative;
+  padding-left: var(--ref-space-5);
+}
+
+.addendum-card li::before {
+  content: "";
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--sys-color-accent);
+}
+
 .budget-section {
   padding-top: var(--ref-space-6);
 }
@@ -489,6 +547,50 @@ h3 {
   color: var(--sys-color-text);
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1;
+}
+
+.payment-terms-card {
+  display: grid;
+  gap: var(--ref-space-5);
+  margin-top: var(--ref-space-5);
+  padding: var(--ref-space-5);
+  border-radius: var(--comp-card-radius);
+}
+
+.payment-terms-intro {
+  max-width: 760px;
+}
+
+.payment-terms-intro h3 {
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.payment-terms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--ref-space-4);
+}
+
+.payment-terms-grid article {
+  padding: var(--ref-space-4);
+  border-radius: var(--ref-radius-md);
+  background: var(--sys-color-surface);
+}
+
+.payment-terms-grid span {
+  display: inline-flex;
+  margin-bottom: var(--ref-space-3);
+  padding: var(--ref-space-2) var(--ref-space-3);
+  border-radius: var(--ref-radius-pill);
+  background: var(--sys-color-accent-soft);
+  color: var(--sys-color-on-accent);
+  font-weight: 800;
+}
+
+.payment-terms-grid h4 {
+  margin: 0 0 var(--ref-space-2);
+  color: var(--sys-color-primary);
+  font-size: 1rem;
 }
 
 .pill-list {
@@ -559,6 +661,7 @@ h3 {
   }
 
   .feature-grid,
+  .addendum-grid,
   .journey {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -570,6 +673,10 @@ h3 {
 
   .budget-head {
     display: none;
+  }
+
+  .payment-terms-grid {
+    grid-template-columns: 1fr;
   }
 
   .site-footer {
@@ -603,6 +710,7 @@ h3 {
   }
 
   .feature-grid,
+  .addendum-grid,
   .journey,
   .check-list,
   .stat-grid {
