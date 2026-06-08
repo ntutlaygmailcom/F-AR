@@ -467,10 +467,6 @@ h3 {
   border-radius: var(--comp-card-radius);
 }
 
-.addendum-card-featured {
-  background: var(--sys-color-surface-warm);
-}
-
 .addendum-card h4 {
   margin: 0 0 var(--ref-space-2);
   color: var(--sys-color-primary);
@@ -527,6 +523,10 @@ h3 {
   background: var(--sys-color-primary);
   color: var(--sys-color-on-primary);
   font-weight: 800;
+}
+
+.budget-head span {
+  color: var(--sys-color-on-primary);
 }
 
 .budget-row strong {
